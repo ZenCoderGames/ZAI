@@ -1,0 +1,12 @@
+{
+	"id": "Test_Action",
+	"bTree": {
+		"id": "ScaleUp",
+		"baseType": "ACTION",
+		"nodeType": "SCALE",
+		"nodeParams": {
+			"scaleAmount": [4,4,4],
+			"scaleSpeed": 2.5
+		}
+	}
+}

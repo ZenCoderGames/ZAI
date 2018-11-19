@@ -1,0 +1,17 @@
+{
+	"scripts": [
+		{
+			"id": "SIMPLE_TEST",
+			"totalFrames": 10,
+			"actions": [
+				{
+					"type": "PLAY_ANIM",
+					"frame": 0,
+					"params": {
+						"animName": "Move"
+					}
+				}
+			]
+		}
+	]
+}

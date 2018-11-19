@@ -1,0 +1,19 @@
+{
+	"id": "Test_SubTree",
+	"bTree": {
+		"id": "Repeat",
+		"baseType": "DECORATOR",
+		"nodeType": "REPEAT",
+		"nodeParams": {
+			"child": {
+				"id": "SubTree",
+				"baseType": "DECORATOR",
+				"nodeType": "SUB_TREE",
+				"nodeParams": {
+					"treeId": "ScaleBTree"
+				}
+			},
+			"numTimes": 2
+		}
+	}
+}

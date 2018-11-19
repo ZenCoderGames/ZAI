@@ -1,0 +1,30 @@
+{
+	"id": "Test_Parallel",
+	"bTree": {
+		"id": "Parallel",
+		"baseType": "COMPOSITE",
+		"nodeType": "PARALLEL",
+		"nodeParams": {
+			"children": [
+				{
+					"id": "ScaleUp",
+					"baseType": "ACTION",
+					"nodeType": "SCALE",
+					"nodeParams": {
+						"scaleAmount": [4,4,4],
+						"scaleSpeed": 2.5
+					}
+				},
+				{
+					"id": "MoveTo",
+					"baseType": "ACTION",
+					"nodeType": "MOVE_TO_POINT",
+					"nodeParams": {
+						"pointPosition": [5,0,0],
+						"speed": 2.5
+					}
+				}
+			]
+		}
+	}
+}

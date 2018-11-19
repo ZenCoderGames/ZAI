@@ -1,0 +1,29 @@
+{
+	"id": "Test_Selector",
+	"bTree": {
+		"id": "Selector",
+		"baseType": "COMPOSITE",
+		"nodeType": "SELECTOR",
+		"nodeParams": {
+			"children": [
+				{
+					"id": "WaitDelay",
+					"baseType": "ACTION",
+					"nodeType": "WAIT",
+					"nodeParams": {
+						"timeToWait": 2
+					}
+				},
+				{
+					"id": "ScaleDown",
+					"baseType": "ACTION",
+					"nodeType": "SCALE",
+					"nodeParams": {
+						"scaleAmount": [4,4,4],
+						"scaleSpeed": 2.5
+					}
+				}
+			]
+		}
+	}
+}

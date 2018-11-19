@@ -1,0 +1,36 @@
+{
+	"id": "Test_DynamicSelector_Negator",
+	"bTree": {
+		"id": "Dynamic Selector And Negator",
+		"baseType": "COMPOSITE",
+		"nodeType": "DYNAMIC_SELECTOR",
+		"nodeParams": {
+			"children": [
+				{
+					"id": "Negator",
+					"baseType": "DECORATOR",
+					"nodeType": "NEGATOR",
+					"nodeParams": {
+						"child": {
+							"id": "WaitDelay",
+							"baseType": "ACTION",
+							"nodeType": "WAIT",
+							"nodeParams": {
+								"timeToWait": 1.5
+							}
+						}
+					}
+				},
+				{
+					"id": "ScaleDown",
+					"baseType": "ACTION",
+					"nodeType": "SCALE",
+					"nodeParams": {
+						"scaleAmount": [4,4,4],
+						"scaleSpeed": 2.5
+					}
+				}
+			]
+		}
+	}
+}

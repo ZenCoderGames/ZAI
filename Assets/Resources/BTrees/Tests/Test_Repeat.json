@@ -1,0 +1,38 @@
+{
+	"id": "Test_Repeat",
+	"bTree": {
+		"id": "Repeat",
+		"baseType": "DECORATOR",
+		"nodeType": "REPEAT",
+		"nodeParams": {
+			"child": {
+				"id": "Sequence",
+				"baseType": "COMPOSITE",
+				"nodeType": "SEQUENCE",
+				"nodeParams": {
+					"children": [
+						{
+							"id": "ScaleUp",
+							"baseType": "ACTION",
+							"nodeType": "SCALE",
+							"nodeParams": {
+								"scaleAmount": [4,4,4],
+								"scaleSpeed": 2.5
+							}
+						},
+						{
+							"id": "ScaleDown",
+							"baseType": "ACTION",
+							"nodeType": "SCALE",
+							"nodeParams": {
+								"scaleAmount": [1,1,1],
+								"scaleSpeed": -2.5
+							}
+						}
+					]
+				}
+			},
+			"numTimes": 2
+		}
+	}
+}

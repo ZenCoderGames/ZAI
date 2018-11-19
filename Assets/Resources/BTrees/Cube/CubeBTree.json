@@ -1,0 +1,28 @@
+{
+	"id": "CubeBTree",
+	"bTree": {
+		"id": "Sequence",
+		"baseType": "COMPOSITE",
+		"nodeType": "DYNAMIC_SELECTOR",
+		"nodeParams": {
+			"children": [
+				{
+					"id": "WaitDelay",
+					"baseType": "ACTION",
+					"nodeType": "WAIT",
+					"nodeParams": {
+						"timeToWait": 2
+					}
+				},
+				{
+					"id": "SubTree",
+					"baseType": "DECORATOR",
+					"nodeType": "SUB_TREE",
+					"nodeParams": {
+						"treeId": "ScaleBTree"
+					}
+				}
+			]
+		}
+	}
+}
