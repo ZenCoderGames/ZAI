@@ -570,6 +570,11 @@ public static class ZUtils
     {
         return js.Contains(id) ? js.ToString(id) : defaultVal;
     }
+
+    public static T ParseEnum<T>(string value)
+    {
+        return (T) System.Enum.Parse(typeof(T), value, true);
+    }
     #endregion
 
     #region DEBUG_DRAWING_UTILS

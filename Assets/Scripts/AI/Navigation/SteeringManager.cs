@@ -18,9 +18,10 @@ namespace ZAI {
     	public static SteeringManager Instance { 
             get { 
                 if(_instance==null) {
-                    GameObject obj = new GameObject("Steering Manager");
-                    SteeringManager steeringManager = obj.AddComponent<SteeringManager>();
-                    return steeringManager;
+                    //GameObject obj = new GameObject("Steering Manager");
+                    //SteeringManager steeringManager = obj.AddComponent<SteeringManager>();
+                    //return steeringManager;
+					return null;
                 }
                 else {
                     return _instance; 
