@@ -11,6 +11,7 @@ namespace ZAI {
 
         protected override void Update () {
             float scaleAmount = _btScaleNodeData.scaleSpeed * Time.deltaTime;
+            float distance = Vector3.Distance(_bTree.AICharacter.LocalScale, _btScaleNodeData.scaleAmount);
             if(Vector3.Distance(_bTree.AICharacter.LocalScale, _btScaleNodeData.scaleAmount)<=Mathf.Abs(scaleAmount*2)) {
                 SetState(STATE.SUCCESS);
             }

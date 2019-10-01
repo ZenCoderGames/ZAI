@@ -8,7 +8,7 @@ namespace ZAI {
         // If needed, can add some core one's here
         public enum ACTION_TYPE { INVALID }
 
-        public BTActionNodeData(JSON js):base(js) {
+        public BTActionNodeData(JSON js):base(js, TYPE.ACTION) {
         }
 
         public static BTNodeData CreateActionNodeData(JSON js) {

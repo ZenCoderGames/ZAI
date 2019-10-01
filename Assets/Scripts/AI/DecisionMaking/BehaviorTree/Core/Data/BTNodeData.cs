@@ -7,10 +7,12 @@ namespace ZAI {
         public string Id { get { return _id; } }
         string _id;
 
-        public enum TYPE { INVALID, ACTION, DECORATOR, COMPOSITE }
+        public enum TYPE { INVALID, ROOT, ACTION, DECORATOR, COMPOSITE }
+        public TYPE type;
 
-        public BTNodeData (JSON js) {
+        public BTNodeData (JSON js, TYPE nodeType) {
             _id = js.ToString("id");
+            type = nodeType;
         }
 
         public static BTNodeData CreateNodeData(JSON js) {
@@ -24,6 +26,11 @@ namespace ZAI {
             }
             else if(baseType == TYPE.COMPOSITE) {
                 return BTCompositeNodeData.CreateCompositeNodeData(js);
+            }
+            else if(baseType == TYPE.ROOT) {
+                BTNodeData rootNodeData = BTDecoratorNodeData.CreateRootNodeData(js);
+                rootNodeData.type = TYPE.ROOT;
+                return rootNodeData;
             }
             else {
                 UnityEngine.Debug.Log("Error: Invalid Node Type: " + baseTypeStr);

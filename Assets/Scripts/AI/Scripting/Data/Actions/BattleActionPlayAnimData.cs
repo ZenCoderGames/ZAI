@@ -12,7 +12,7 @@ namespace ZAI {
 
         public BattleActionPlayAnimData(JSON actionJS):base(actionJS)
         {
-            JSON parms = actionJS.ToJSON("params");
+            JSON parms = actionJS.ToJSON("nodeParams");
             animName = parms.ToString("animName");
             animList = parms.ToArray<string>("animList");
             speed = parms.ToFloat("speed", 1);

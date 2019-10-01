@@ -6,12 +6,12 @@ namespace ZAI {
 
     public class BTCompositeNodeData:BTNodeData {
 
-        public enum COMPOSITE_TYPE { INVALID, SEQUENCE, SELECTOR, PARALLEL, DYNAMIC_SELECTOR }
+        public enum COMPOSITE_TYPE { INVALID, SEQUENCER, SELECTOR, PARALLEL, DYNAMIC_SELECTOR }
 
         public List<BTNodeData> Children { get { return _children; } }
         List<BTNodeData> _children;
 
-        public BTCompositeNodeData(JSON js):base(js) {
+        public BTCompositeNodeData(JSON js):base(js, TYPE.COMPOSITE) {
             _children = new List<BTNodeData>();
 
             JSON paramsJS = js.ToJSON("nodeParams");
@@ -28,7 +28,7 @@ namespace ZAI {
         public static BTNodeData CreateCompositeNodeData(JSON js) {
             string nodeTypeStr = js.ToString("nodeType");
             COMPOSITE_TYPE nodeType = (COMPOSITE_TYPE)Enum.Parse(typeof(COMPOSITE_TYPE), nodeTypeStr);
-            if(nodeType == COMPOSITE_TYPE.SEQUENCE) {
+            if(nodeType == COMPOSITE_TYPE.SEQUENCER) {
                 return new BTSequenceNodeData(js);
             }
             else if(nodeType == COMPOSITE_TYPE.SELECTOR) {
@@ -46,7 +46,7 @@ namespace ZAI {
             return null;
         }
 
-        void AddChild(BTNodeData btNode) {
+        public void AddChild(BTNodeData btNode) {
             _children.Add(btNode);
         }
     }

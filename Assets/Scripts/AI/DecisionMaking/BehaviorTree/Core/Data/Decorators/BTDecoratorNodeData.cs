@@ -11,7 +11,7 @@ namespace ZAI {
         public BTNodeData Child { get { return _child; } }
         BTNodeData _child;
 
-        public BTDecoratorNodeData(JSON js):base(js) {
+        public BTDecoratorNodeData(JSON js):base(js, TYPE.DECORATOR) {
             JSON paramsJS = js.ToJSON("nodeParams");
             if(paramsJS.Contains("child")) {
                 JSON childNodeJS = paramsJS.ToJSON("child");
@@ -20,6 +20,10 @@ namespace ZAI {
                     AddChild(childNode);
                 }
             }
+        }
+
+        public static BTNodeData CreateRootNodeData(JSON js) {
+            return new BTDecoratorNodeData(js);
         }
 
         public static BTNodeData CreateDecoratorNodeData(JSON js) {

@@ -199,7 +199,6 @@ namespace ZAI {
         public void DebugDrawOnRun() {
             for(int i=0; i<_path.Count; ++i) {
                 NavGrid.Cell cell = _path[i];
-
                 if(cell == _currentPathStartCell)
                     Gizmos.color = Color.yellow;
                 else if(cell == _currentPathEndCell)

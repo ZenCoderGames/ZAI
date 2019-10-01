@@ -1,13 +1,5 @@
 {
 	"bTrees": [
-		"BTrees/Cube/CubeBTree",
-		"BTrees/Shared/ScaleBTree",
-		"BTrees/Tests/Test_Action",
-		"BTrees/Tests/Test_Sequence",
-		"BTrees/Tests/Test_Selector",
-		"BTrees/Tests/Test_Parallel",
-		"BTrees/Tests/Test_DynamicSelector_Negator",
-		"BTrees/Tests/Test_Repeat",
-		"BTrees/Tests/Test_SubTree"
+		"NodeEditor/scaleTest"
 	]
 }

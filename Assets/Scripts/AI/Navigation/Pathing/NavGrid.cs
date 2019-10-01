@@ -9,6 +9,7 @@ namespace ZAI {
         public int rows, cols;
         public float cellSize;
         public bool refreshObstacles;
+        public bool showGrid;
         public bool showDebug;
 
         public class Cell:FastPriorityQueueNode {
@@ -225,18 +226,23 @@ namespace ZAI {
 
         #region DEBUG
         void OnDrawGizmos() {
-            if(showDebug && _grid!=null) {
+            if(showGrid && _grid!=null) {
                 for(int r=0; r<rows; ++r) {
                     for(int c=0; c<cols; ++c) {
                         Cell cell = _grid[r,c];
-                        if(cell.isObstacle)
-                            Gizmos.color = Color.black;
-                        else if(cell.visited==1)
-                            Gizmos.color = Color.cyan;
-                        else if(cell.visited>1)
-                            Gizmos.color = Color.red;
-                        else
+                        if(showDebug) {
+                            if(cell.isObstacle)
+                                Gizmos.color = Color.black;
+                            else if(cell.visited==1)
+                                Gizmos.color = Color.cyan;
+                            else if(cell.visited>1)
+                                Gizmos.color = Color.red;
+                            else
+                                Gizmos.color = Color.white;
+                        }
+                        else {
                             Gizmos.color = Color.white;
+                        }
 
                         Gizmos.DrawSphere(cell.GetPosition(), 0.5f);
                     }

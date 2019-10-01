@@ -16,6 +16,14 @@
 					}
 				},
 				{
+					"id": "Wait",
+					"baseType": "ACTION",
+					"nodeType": "WAIT",
+					"nodeParams": {
+						"timeToWait": 2
+					}
+				},
+				{
 					"id": "ScaleDown",
 					"baseType": "ACTION",
 					"nodeType": "SCALE",
